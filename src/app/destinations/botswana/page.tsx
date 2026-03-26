@@ -245,7 +245,7 @@ export default function BotswanaPage() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-sasa-green/20 via-sasa-green/5 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-sasa-green/20 via-sasa-green/5 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="text-sasa-sec-green mb-3">{h.icon}</div>
                   <h3 className="font-serif text-xl text-white mb-2 leading-snug">

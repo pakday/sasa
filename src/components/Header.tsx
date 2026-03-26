@@ -42,7 +42,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+        <div className="grid grid-cols-[auto_1fr_auto] items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
@@ -56,7 +56,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center justify-center gap-8">
             {/* Destinations Dropdown */}
             <div
               className="relative"
@@ -114,51 +114,51 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
+          </nav>
 
+          <div className="flex items-center justify-end gap-2">
             <Link
               href="/start-your-trip"
-              className="bg-sasa-brown text-sasa-white text-xs tracking-[0.15em] uppercase font-medium px-6 py-3 hover:bg-sasa-sec-brown transition-colors duration-300"
+              className="hidden lg:inline-block bg-sasa-brown text-sasa-white text-xs tracking-[0.15em] uppercase font-medium px-6 py-3 hover:bg-sasa-sec-brown transition-colors duration-300"
             >
               Start Your Trip
             </Link>
-          </nav>
-
-          {/* Mobile Toggle */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-sasa-brown p-2"
-            aria-label="Toggle navigation menu"
-          >
-            {mobileOpen ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden text-sasa-brown p-2"
+              aria-label="Toggle navigation menu"
+            >
+              {mobileOpen ? (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
