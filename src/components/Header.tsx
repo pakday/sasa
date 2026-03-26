@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const destinations = [
+  { name: "Botswana", href: "/destinations/botswana" },
   { name: "Rwanda", href: "/destinations/rwanda" },
   { name: "Kenya", href: "/destinations/kenya" },
   { name: "Tanzania", href: "/destinations/tanzania" },
@@ -14,7 +15,6 @@ const destinations = [
   { name: "South Africa", href: "/destinations/south-africa" },
   { name: "Zimbabwe", href: "/destinations/zimbabwe" },
   { name: "Zambia", href: "/destinations/zambia" },
-  { name: "Botswana", href: "/destinations/botswana" },
 ];
 
 const navLinks = [
@@ -46,7 +46,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/logo/4.png"
+              src="/logo/sasa-logo.png"
               alt="Sasa Travel"
               width={140}
               height={50}
