@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 /* ─── Journey Highlights ────────────────────────────────────────────── */
 const highlights = [
   {
+    image: "/images/Botswana/hyenas-laying-down-round.jpg",
     icon: (
       <svg
         className="w-6 h-6"
@@ -32,6 +33,7 @@ const highlights = [
       "Home to Africa's largest elephant population and an extraordinary density of predators — lions, leopards, cheetahs, and wild dogs.",
   },
   {
+    image: "/images/Botswana/16167.jpg",
     icon: (
       <svg
         className="w-6 h-6"
@@ -52,6 +54,7 @@ const highlights = [
       "One of the world's most unique ecosystems — a vast inland river delta teeming with wildlife, navigated by traditional mokoro canoes.",
   },
   {
+    image: "/images/general/AdobeStock_312250474.jpeg",
     icon: (
       <svg
         className="w-6 h-6"
@@ -72,6 +75,7 @@ const highlights = [
       "Botswana's high-value, low-volume approach to tourism means exclusive access to pristine landscapes with beautifully designed camps.",
   },
   {
+    image: "/images/Botswana/8776.jpg",
     icon: (
       <svg
         className="w-6 h-6"
@@ -133,7 +137,7 @@ export default function BotswanaPage() {
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-end justify-start overflow-hidden">
+      <section className="relative min-h-[calc(100vh-80px)] flex items-end justify-start overflow-hidden">
         <video
           autoPlay
           muted
@@ -196,17 +200,17 @@ export default function BotswanaPage() {
       </section>
 
       {/* ── Intro / Why Botswana ─────────────────────────────────────── */}
-      <section className="bg-sasa-brown py-20 md:py-28">
+      <section className="bg-white py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-sasa-sec-green text-xs tracking-[0.3em] uppercase mb-8">
+          <p className="text-sasa-green text-xs tracking-[0.3em] uppercase mb-8">
             Experience Botswana at Its Finest
           </p>
-          <p className="font-serif text-3xl md:text-4xl lg:text-5xl text-sasa-white italic leading-relaxed">
+          <p className="font-serif text-3xl md:text-4xl lg:text-5xl text-sasa-brown italic leading-relaxed">
             &ldquo;A rare sense of space, privacy, and quiet luxury — making it
             one of the most extraordinary safari destinations in Africa.&rdquo;
           </p>
-          <div className="mt-10 w-14 h-px bg-sasa-sec-green mx-auto" />
-          <p className="mt-10 text-sasa-white/65 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+          <div className="mt-10 w-14 h-px bg-sasa-green mx-auto" />
+          <p className="mt-10 text-sasa-brown/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
             Botswana is a place for travelers looking for something truly
             special. Think remarkable wildlife, beautifully designed camps, and
             landscapes that shift from lush floodplains to salt pans and desert.
@@ -215,8 +219,8 @@ export default function BotswanaPage() {
         </div>
       </section>
 
-      {/* ── Why Botswana — 4 Pillars ─────────────────────────────────── */}
-      <section className="bg-stone-50 py-20 md:py-28">
+      {/* ── Why Botswana — Image Cards ──────────────────────────── */}
+      <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <p className="text-sasa-sec-brown text-xs tracking-[0.3em] uppercase mb-4">
@@ -227,32 +231,51 @@ export default function BotswanaPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
             {highlights.map((h) => (
-              <div key={h.title} className="flex flex-col">
-                <div className="text-sasa-green mb-5">{h.icon}</div>
-                <h3 className="font-serif text-xl text-sasa-brown mb-3">
-                  {h.title}
-                </h3>
-                <p className="text-sasa-black/60 text-sm leading-relaxed">
-                  {h.description}
-                </p>
+              <div
+                key={`img-${h.title}`}
+                className="relative h-[480px] overflow-hidden group cursor-pointer"
+              >
+                <Image
+                  src={h.image}
+                  alt={h.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-sasa-green/20 via-sasa-green/5 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="text-sasa-sec-green mb-3">{h.icon}</div>
+                  <h3 className="font-serif text-xl text-white mb-2 leading-snug">
+                    {h.title}
+                  </h3>
+                  <p className="text-white/75 text-sm leading-relaxed">
+                    {h.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Full-width immersive divider ─────────────────────────────── */}
-      <div className="relative h-[50vh] min-h-72 overflow-hidden">
+      {/* ── Full-width immersive divider ────────────────────────────── */}
+      <div className="relative h-60 lg:h-80 overflow-hidden flex items-center justify-center">
         <Image
-          src="/images/Botswana/8776.jpg"
-          alt="Botswana landscape"
+          src="/images/general/AdobeStock_214680490.jpeg"
+          alt="Botswana wildlife moment"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-sasa-brown/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-black/50" />
+        <div className="relative z-10 text-center px-6">
+          <p className="font-serif text-lg md:text-2xl lg:text-3xl text-sasa-white italic leading-relaxed max-w-xl mx-auto">
+            &ldquo;Where wilderness meets wonder&rdquo;
+          </p>
+        </div>
       </div>
 
       {/* ── Featured Journey ─────────────────────────────────────────── */}
@@ -343,7 +366,7 @@ export default function BotswanaPage() {
                         <span
                           className={`text-xs tracking-wide flex-shrink-0 ${
                             d.soldOut
-                              ? "text-sasa-sec-red"
+                              ? "text-sasa-sec-green"
                               : "text-sasa-sec-green"
                           }`}
                         >
@@ -511,7 +534,7 @@ export default function BotswanaPage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-sasa-brown/50 group-hover:bg-sasa-brown/65 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <h3 className="font-serif text-2xl text-sasa-white mb-1">
                     {dest.name}
@@ -519,6 +542,21 @@ export default function BotswanaPage() {
                   <p className="text-sasa-white/60 text-xs tracking-wide">
                     {dest.sub}
                   </p>
+                </div>
+                <div className="absolute top-4 right-4 bg-white/90 w-9 h-9 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <svg
+                    className="w-4 h-4 text-sasa-brown"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M7 17L17 7M17 7H7M17 7v10"
+                    />
+                  </svg>
                 </div>
               </Link>
             ))}

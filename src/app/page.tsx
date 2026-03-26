@@ -234,7 +234,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/about"
-                className="inline-block border-b-2 border-sasa-brown text-sasa-brown text-xs tracking-[0.2em] uppercase font-medium pb-1 hover:border-sasa-green hover:text-sasa-green transition-colors duration-300"
+                className="inline-block bg-sasa-brown text-white text-xs tracking-[0.2em] uppercase font-medium px-8 py-3 hover:bg-sasa-sec-brown transition-colors duration-300"
               >
                 Discover Our Story
               </Link>
@@ -280,7 +280,7 @@ export default function HomePage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-sasa-brown/45 group-hover:bg-sasa-brown/65 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition-colors duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="font-serif text-2xl text-sasa-white mb-1">
                     {dest.name}
@@ -289,13 +289,13 @@ export default function HomePage() {
                     {dest.sub}
                   </p>
                 </div>
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute top-4 right-4 bg-white/90 w-9 h-9 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <svg
-                    className="w-5 h-5 text-sasa-sec-green"
+                    className="w-4 h-4 text-sasa-brown"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    strokeWidth={1.5}
+                    strokeWidth={2}
                   >
                     <path
                       strokeLinecap="round"
@@ -319,7 +319,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Founder's Message ───────────────────────────────────────── */}
+      {/* ── Founder's Message ──────────────────────────────────────── */}
       <section className="bg-white overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
           <div className="relative h-80 lg:h-auto order-2 lg:order-1">
@@ -341,21 +341,21 @@ export default function HomePage() {
               between Los Angeles, London, and Rwanda, Africa has always
               remained the place that grounds me most.&rdquo;
             </blockquote>
-            <p className="text-sasa-white/65 text-sm leading-relaxed mb-5">
+            <p className="text-sasa-white/65 text-base leading-relaxed mb-5">
               Having traveled across the continent, I&apos;ve come to appreciate
               that what makes Africa unforgettable is not just its beauty,
               wildlife, or landscapes, but the feeling it gives you — the
               warmth, depth, rhythm, and sense of connection that is hard to
               find anywhere else.
             </p>
-            <p className="text-sasa-white/65 text-sm leading-relaxed mb-5">
+            <p className="text-sasa-white/65 text-base leading-relaxed mb-5">
               This company was born from a desire to share that feeling with
               others through journeys that are thoughtful, personal, and rooted
               in real experience. I want travelers to see Africa beyond the
               obvious — through its people, culture, landscapes, and the quiet
               moments that leave a lasting mark.
             </p>
-            <p className="text-sasa-white/65 text-sm leading-relaxed mb-10">
+            <p className="text-sasa-white/65 text-base leading-relaxed mb-10">
               It would be a privilege for me and my team to help shape that
               experience with you.
             </p>
@@ -489,7 +489,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ── Impact ──────────────────────────────────────────────────── */}
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">

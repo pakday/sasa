@@ -82,9 +82,9 @@ export default function Header() {
                 </svg>
               </button>
 
-              {/* Dropdown — sits flush with no gap so hover stays connected */}
+              {/* Dropdown — small gap from nav text for breathing room */}
               <div
-                className={`absolute top-full left-0 pt-0 bg-white border border-stone-200 min-w-48 shadow-lg transition-all duration-200 ${
+                className={`absolute top-full left-0 mt-3 bg-white border border-stone-200 min-w-48 shadow-lg transition-all duration-200 ${
                   destOpen
                     ? "opacity-100 translate-y-0 pointer-events-auto"
                     : "opacity-0 -translate-y-1 pointer-events-none"

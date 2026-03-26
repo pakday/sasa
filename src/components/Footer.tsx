@@ -25,19 +25,19 @@ const destinations = [
 
 export default function Footer() {
   return (
-    <footer className="bg-sasa-brown text-sasa-white">
+    <footer className="bg-white text-sasa-brown border-t border-stone-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-16 lg:pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
-              src="/logo/5.png"
+              src="/logo/sasa-logo.png"
               alt="Sasa Travel"
               width={160}
               height={50}
               className="h-10 w-auto mb-6"
             />
-            <p className="text-sasa-white/60 text-sm leading-relaxed max-w-xs">
+            <p className="text-sasa-brown/55 text-sm leading-relaxed max-w-xs">
               Experience Africa through the eyes of locals — personal journeys
               shaped by real connection, rich culture, and unforgettable
               wildlife.
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Explore */}
           <div>
-            <h4 className="text-sasa-sec-green text-xs tracking-[0.2em] uppercase mb-5 font-medium">
+            <h4 className="text-sasa-green text-xs tracking-[0.2em] uppercase mb-5 font-medium">
               Explore
             </h4>
             <ul className="space-y-3">
@@ -54,7 +54,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sasa-white/60 text-sm hover:text-sasa-sec-green transition-colors duration-300"
+                    className="text-sasa-brown/60 text-sm hover:text-sasa-green transition-colors duration-300"
                   >
                     {item.name}
                   </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Destinations */}
           <div>
-            <h4 className="text-sasa-sec-green text-xs tracking-[0.2em] uppercase mb-5 font-medium">
+            <h4 className="text-sasa-green text-xs tracking-[0.2em] uppercase mb-5 font-medium">
               Destinations
             </h4>
             <ul className="space-y-3">
@@ -73,7 +73,7 @@ export default function Footer() {
                 <li key={dest.name}>
                   <Link
                     href={dest.href}
-                    className="text-sasa-white/60 text-sm hover:text-sasa-sec-green transition-colors duration-300"
+                    className="text-sasa-brown/60 text-sm hover:text-sasa-green transition-colors duration-300"
                   >
                     {dest.name}
                   </Link>
@@ -84,10 +84,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sasa-sec-green text-xs tracking-[0.2em] uppercase mb-5 font-medium">
+            <h4 className="text-sasa-green text-xs tracking-[0.2em] uppercase mb-5 font-medium">
               Find Us
             </h4>
-            <address className="not-italic text-sasa-white/60 text-sm leading-relaxed space-y-1">
+            <address className="not-italic text-sasa-brown/60 text-sm leading-relaxed space-y-1">
               <p>8424 Santa Monica Blvd</p>
               <p>Los Angeles, CA 90069</p>
               <p>United States</p>
@@ -95,7 +95,7 @@ export default function Footer() {
             <div className="mt-8">
               <Link
                 href="/start-your-trip"
-                className="inline-block border border-sasa-sec-green text-sasa-sec-green text-xs tracking-[0.15em] uppercase px-5 py-3 hover:bg-sasa-sec-green hover:text-sasa-brown transition-colors duration-300"
+                className="inline-block border border-sasa-brown text-sasa-brown text-xs tracking-[0.15em] uppercase px-5 py-3 hover:bg-sasa-brown hover:text-sasa-white transition-colors duration-300"
               >
                 Begin the Conversation
               </Link>
@@ -103,20 +103,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-sasa-sec-brown/40 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sasa-white/30 text-xs">
+        <div className="mt-16 pt-8 border-t border-stone-300 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sasa-brown/70 text-xs">
             © {new Date().getFullYear()} Sasa Travel. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link
               href="/privacy"
-              className="text-sasa-white/30 text-xs hover:text-sasa-white/60 transition-colors"
+              className="text-sasa-brown/70 text-xs hover:text-sasa-brown transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-sasa-white/30 text-xs hover:text-sasa-white/60 transition-colors"
+              className="text-sasa-brown/70 text-xs hover:text-sasa-brown transition-colors"
             >
               Terms of Use
             </Link>
